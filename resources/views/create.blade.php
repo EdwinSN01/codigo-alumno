@@ -1,36 +1,33 @@
 @extends('layouts.master')
 
-@section('title', 'Crear Alumno')
+@section('title', 'Crear Cliente')
 
 @section('content')
-<h1 colspan="4">Crear Nuevo Alumno</h1>
+<h1 colspan="4">Crear Nuevo Cliente</h1>
     <table cellpadding="3" cellspacing="5">
 
-        <form action="{{ route('alumnos.store') }}" method="post">
+        <form action="{{ route('clientes.store') }}" method="post">
             @csrf
             <tr>
-                <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre">{{ $errors->first('nombre')}}
+        <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombres" name="nombres">{{ $errors->first('nombres')}}
         </div>
         <div class="form-group">
             <label for="apellidos">Apellidos</label>
-            <input type="text" class="form-control" id="apellidos" name="apellidos" >{{ $errors->first('nPerCodigo')}}
+            <input type="text" class="form-control" id="apellidos" name="apellidos" >{{ $errors->first('apellidos')}}
         </div>
         <div class="form-group">
-            <label for="curso">Curso</label>
-            <input type="text" class="form-control" id="curso" name="curso" >{{ $errors->first('curso')}}
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email">{{ $errors->first('email')}}
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Direccion</label>
+            <input type="text"  class="form-control" id="direccion" name="direccion">{{ $errors->first('direccion')}}
         </div>
         <div class="form-group">
-            <label for="nota1">Nota 1</label>
-            <input type="number" step="0.01" class="form-control" id="nota1" name="nota1">{{ $errors->first('nota1')}}
-        </div>
-        <div class="form-group">
-            <label for="nota2">Nota 2</label>
-            <input type="number" step="0.01" class="form-control" id="nota2" name="nota2">{{ $errors->first('nota2')}}
-        </div>
-        <div class="form-group">
-            <label for="nota3">Nota 3</label>
-            <input type="number" step="0.01" class="form-control" id="nota3" name="nota3" >{{ $errors->first('nota3')}}
+            <label for="fono">Fono</label>
+            <input type="number" step="0.01" class="form-control" id="fono" name="fono">{{ $errors->first('fono')}}
         </div>
     </tr>
     <tr>
@@ -43,3 +40,4 @@
         </form>
     </table>
 @endsection
+ 
